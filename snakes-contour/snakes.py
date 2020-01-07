@@ -139,7 +139,7 @@ def run(fpath, radius):
         node_dict[1].append(node)
     node_dict = generate_nodes(V,magnitude,node_dict)
     ''' Start iteration '''
-    n_steps = 200
+    n_steps = 70
     fig = plt.figure(figsize=(10, 10))
     ax = fig.add_subplot(111)
     plt.pause(5)
@@ -163,12 +163,11 @@ def run(fpath, radius):
         node_dict = generate_nodes(V,magnitude,node_dict)
         if t%plot_every==0:
             ax.clear()
-            ax.imshow(Im)
+            ax.imshow(Im, cmap='gray')
             ax.set_title('frame ' + str(t))
             plot_snake(ax, V)
             plt.pause(0.5)
 
-    plt.pause(3)
 
 
 if __name__ == '__main__':

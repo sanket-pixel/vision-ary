@@ -91,7 +91,7 @@ def front_propogation(phi,w):
     front_prop_term = wx_max*diffx_forward + wx_min*diffx_backward + wy_max*diffy_forward + wy_min*diffy_backward
     return front_prop_term
 if __name__ == '__main__':
-
+    plt.pause(4)
     n_steps = 6000
     plot_every_n_step = 100
 
