@@ -6,3 +6,8 @@ This project concerns with object segmentation the image using level-sets with a
 The final result looks like this
 ![Level Set in action](Level-sets.gif)
 
+# 2. Snakes Based Contour Fitting (Dynamic Programming)
+This project concerns with object segmentation of the object in the image using snakes ( Active Contours).Firstly, a snake is initiaslized  by a circle around the object and the energy function consisting of the elasticity and smoothness term is optimized using dynamic programming. The elastic term  is a pairwise cost, penalizing deviation from the average distance between pairs of nodes. Finally converges of the snake to the boundary of the object is visualized.
+The final result looks like this
+![Level Set in action](Snakes.gif)
+
