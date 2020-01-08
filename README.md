@@ -21,8 +21,8 @@ In this approach, we iteratively find the closest point on the edge. At each ite
 closest edge points, we apply an affine transformation on the original landmark points, to get new landmmark
 points that are closer to the edge points. We claim to have converged when the psi stops changing.
 
-step 1 : Find edges of the hand image using Canny
-step 2 : Pre-compute the distance transform of the image
+1. Find edges of the hand image using Canny
+2. Pre-compute the distance transform of the image
 step 3 : For each point w find the closest point in the edges.(Correspondence)
  a. w = Point on the shape model. (trasnformed)
  b. E = Point in the edge list.
