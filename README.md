@@ -17,6 +17,17 @@ The final result looks like this
 ![MRF in action](denoise.gif)
 
 ## 4. Iterative Closest Point Algorithm for Template Shape Model
-This project concerns with image denoising using Markov Random Fields which uses the Markov property that a nodes state only depends on its neighboring nodes. Markov Random Fields uses the prior that neighhboring pixels are smooth. If the neighboring pixels are different, they are penalized. The image is converted in a graph data structure using pixels as nodes. Each pixel (node) are connected to the “source node” and the “sink node” with directed edges as well as the directed edges between its left, top, right and bottom neighboring pixel. The uanry term is the likelihood term derived using Bernoulli distribuiton. While the pairwise terms are derived according the smoothness prior discussed above. If the pixels are same, the pairwise term is small, otherwise its large. Min-cut algorithm is then applied on this graph structure to ensure we get a MAP estimate. The idea is extended to more than one labels using alpha expansion, which approximates the solution for non-conve Potts model.
-The final result looks like this
+In this approach, we iteratively find the closest point on the edge. At each iteration, once we have found the
+closest edge points, we apply an affine transformation on the original landmark points, to get new landmmark
+points that are closer to the edge points. We claim to have converged when the psi stops changing.
+
+step 1 : Find edges of the hand image using Canny
+step 2 : Pre-compute the distance transform of the image
+step 3 : For each point w find the closest point in the edges.(Correspondence)
+ a. w = Point on the shape model. (trasnformed)
+ b. E = Point in the edge list.
+ c. D : Distance transform at point (w)
+ d. G = Find the gradient of the distance transform.
+ e. x = (w - (D/Magnitude(G))*(Gx*Gy))
+step 4 : Find an affine transformation using closed form solution.
 ![MRF in action](icp.gif)
