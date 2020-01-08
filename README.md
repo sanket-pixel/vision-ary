@@ -23,11 +23,11 @@ points that are closer to the edge points. We claim to have converged when the p
 
 1. Find edges of the hand image using Canny
 2. Pre-compute the distance transform of the image
-step 3 : For each point w find the closest point in the edges.(Correspondence)
- a. w = Point on the shape model. (trasnformed)
- b. E = Point in the edge list.
- c. D : Distance transform at point (w)
- d. G = Find the gradient of the distance transform.
- e. x = (w - (D/Magnitude(G))*(Gx*Gy))
-step 4 : Find an affine transformation using closed form solution.
-![MRF in action](icp.gif)
+3. For each point w find the closest point in the edges.(Correspondence)
+   a. w = Point on the shape model. (trasnformed)
+   b. E = Point in the edge list.
+   c. D : Distance transform at point (w)
+   d. G = Find the gradient of the distance transform.
+   e. x = (w - (D/Magnitude(G))*(Gx*Gy))
+4. Find an affine transformation using closed form solution.
+![ICP in action](icp.gif)
