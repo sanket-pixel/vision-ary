@@ -35,17 +35,17 @@ points that are closer to the edge points. We claim to have converged when the p
 
 ## 4. Statistical Shape Modeling with Principal Component Analysis
 In this problem, we have been given various samoples from the shape space, ( hands in this example ) and the goal is to learn the statistical properties of from these samples , more specifically, the mean and variance of the distribution of the landmark points of the shapes. This is then projected onto a sub-space using PCA such that this new model, captures the primary features of the shape and drops the noise from the training samples. Given a new sample, the PCA model can fit a shape using the sub-space model efficiently using ICP.
-A. Training the PCA Model : 
-   1. In statistical shape modelling, we first calculate the mean shape. 
-   2. Then find the covariance matrix of the points.
-   3. Then we find the eigen value and eigen vector subspace.
-   4. Finally we caclulate phi which represents set of eigen vectors.
- B. Inference on a new Sample :
-   1. Calculate the w = mu + phi.h
-   2. Find the psuedo inverse components. 3. Caclulate psi based on test points.
-   4. Transform w using the new psi.
-   5. Caclulate the components of h.
-   6. Reiterate if shape not converged.
+   ### A. Training the PCA Model : 
+      1. In statistical shape modelling, we first calculate the mean shape. 
+      2. Then find the covariance matrix of the points.
+      3. Then we find the eigen value and eigen vector subspace.
+      4. Finally we caclulate phi which represents set of eigen vectors.
+   ### B. Inference on a new Sample :
+      1. Calculate the w = mu + phi.h
+      2. Find the psuedo inverse components. 3. Caclulate psi based on test points.
+      4. Transform w using the new psi.
+      5. Caclulate the components of h.
+      6. Reiterate if shape not converged.
 
 
 ![ICP in action](icp.gif)
