@@ -48,4 +48,4 @@ In this problem, we have been given various samoples from the shape space, ( han
       6. Reiterate if shape not converged.
 
 
-![ICP in action](icp.gif)
+![SSP in action](PCA_Shape.png)
