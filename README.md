@@ -40,12 +40,13 @@ In this problem, we have been given various samoples from the shape space, ( han
       2. Then find the covariance matrix of the points.
       3. Then we find the eigen value and eigen vector subspace.
       4. Finally we caclulate phi which represents set of eigen vectors.
+ ![SSP in action](PCA_Shape.png)
    ### B. Inference on a new Sample :
       1. Calculate the w = mu + phi.h
       2. Find the psuedo inverse components. 3. Caclulate psi based on test points.
       4. Transform w using the new psi.
       5. Caclulate the components of h.
       6. Reiterate if shape not converged.
+ ![SSP in action](SSP.gif)
 
 
-![SSP in action](PCA_Shape.png)
