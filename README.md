@@ -49,9 +49,16 @@ In this problem, we have been given various samoples from the shape space, ( han
       6. Reiterate if shape not converged.
  ![SSP in action](SSP.gif)
 
-## 4. SIFT Feature Matching
+## 5. SIFT Feature Matching
 SIFT is a classic Feature Extraction Algorithm that produces a scale and rotation invariant, local feature descriptor of keypoints. These descriptors
 can be used to find matches between two images of the same scene , which has further applications in depth calculations and image stitching. This project
 uses 2 images of a scene containing mountains and finds keypoints with their respective SIFT descriptors. Then it finds matches using Euclidean distance
 between features. If also eliminates ambiguity by using second-best match ratio.
 ![SIFT in Action](mapped_maches.png)
+
+## 6. Harris and Forstner Corner Detection Algorithm
+Corners are keypoints in image that show high change in intensity values if we move along any direction from that position. Corners help in finding
+locally distinct points in an image, required for finding important features. The primary idea to detect if a given point is a corner, is to find the Jacobian of the local neighborhood around that point.
+Then we evaluate  the Eigen Values of that Jacobian. If both these values are large, it indicates that the point is a corner. Harris and Forstner have proposed algorithms for the same, which have been implemented in this
+project.
+![Corner Detection in Action](corner.gif)
