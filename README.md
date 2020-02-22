@@ -54,4 +54,4 @@ SIFT is a classic Feature Extraction Algorithm that produces a scale and rotatio
 can be used to find matches between two images of the same scene , which has further applications in depth calculations and image stitching. This project
 uses 2 images of a scene containing mountains and finds keypoints with their respective SIFT descriptors. Then it finds matches using Euclidean distance
 between features. If also eliminates ambiguity by using second-best match ratio.
-![SIFT in Action](mapped_matches.png)
+![SIFT in Action](mapped_maches.png)
